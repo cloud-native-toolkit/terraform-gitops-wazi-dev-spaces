@@ -1,0 +1,26 @@
+
+apiVersion: org.eclipse.che/v1
+kind: CheCluster
+metadata:
+    name: wazi-devspaces-{{ .Values.namespace }}  
+    namespace: {{ .Values.namespace }}  
+  annotations:
+    argocd.argoproj.io/sync-wave: "300"
+spec:
+    auth:
+        externalIdentityProvider: false
+        initialOpenShiftOAuthUser: false
+    database:
+        externalDb: false
+    metrics:
+        enable: true
+    server:
+        cheFlavor: codeready
+        allowUserDefinedWorkspaceNamespaces: false
+        gitSelfSignedCert: false
+        tlsSupport: true
+        workspaceNamespaceDefault: wazi-devspaces-<username>
+    storage:
+        preCreateSubPaths: true
+        pvcClaimSize: 10Gi
+        pvcStrategy: common	
