@@ -1,9 +1,11 @@
 apiVersion: org.eclipse.che/v1
 kind: WaziLicense
 metadata:
-    name: wazi-devspaces-{{ .Values.namespace }}  
-    namespace: {{ .Values.namespace }}  
+  name: wazi-devspaces-{{ .Values.namespace }}  
+  namespace: {{ .Values.namespace }} 
+  annotations:
+    argocd.argoproj.io/sync-wave: "200"  
 spec:
-    license:
-        accept: {{ .Values.wazi_license_accept }}  
-        use: {{ .Values.wazi_license_use }}  
+  license:
+    accept: {{ .Values.wazi_license_accept }}  
+    use: {{ .Values.wazi_license_use }}  
