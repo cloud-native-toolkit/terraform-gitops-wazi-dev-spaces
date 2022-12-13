@@ -3,9 +3,7 @@ apiVersion: org.eclipse.che/v1
 kind: CheCluster
 metadata:
     name: wazi-devspaces-{{ .Values.namespace }}  
-    namespace: {{ .Values.namespace }}  
-    annotations:
-        argocd.argoproj.io/sync-wave: "300"
+    namespace: {{ .Values.namespace }} 
 spec:
     auth:
         externalIdentityProvider: false

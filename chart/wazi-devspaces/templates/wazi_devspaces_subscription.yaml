@@ -4,8 +4,6 @@ kind: Subscription
 metadata:
     name: wazi-devspaces-{{ .Values.namespace }}-subscription
     namespace: {{ .Values.namespace }}
-    annotations:
-        argocd.argoproj.io/sync-wave: "200"
 spec:
     channel: v2.3
     name: ibm-wazi-developer-for-workspaces

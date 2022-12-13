@@ -3,8 +3,6 @@ kind: WaziLicense
 metadata:
     name: wazi-devspaces-{{ .Values.namespace }}  
     namespace: {{ .Values.namespace }}  
-    annotations:
-        argocd.argoproj.io/sync-wave: "200"
 spec:
     license:
         accept: {{ .Values.wazi_license_accept }}  
