@@ -1,5 +1,10 @@
 module "wazi_devspaces" {
   source = "./module"
+  depends_on = [
+    module.dev_software_olm,
+    module.gitops_namespace,
+    module.gitops-bootstrap
+  ]
 
   gitops_config = module.gitops.gitops_config
   git_credentials = module.gitops.git_credentials

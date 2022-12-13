@@ -1,8 +1,7 @@
 name: gitops-wazi-dev-spaces
 type: gitops
 description: >-
-  Module to populate a gitops repo with the resources to provision
-  wazi-dev-spaces
+  Module to populate a gitops repo with the resources to provision wazi-dev-spaces
 tags:
   - tools
   - gitops
