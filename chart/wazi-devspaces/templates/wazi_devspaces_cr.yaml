@@ -4,8 +4,8 @@ kind: CheCluster
 metadata:
     name: wazi-devspaces-{{ .Values.namespace }}  
     namespace: {{ .Values.namespace }}  
-  annotations:
-    argocd.argoproj.io/sync-wave: "300"
+    annotations:
+        argocd.argoproj.io/sync-wave: "300"
 spec:
     auth:
         externalIdentityProvider: false
