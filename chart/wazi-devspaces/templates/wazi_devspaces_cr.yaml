@@ -21,4 +21,6 @@ spec:
   storage:
     preCreateSubPaths: true
     pvcClaimSize: 10Gi
-    pvcStrategy: common	
+    postgresPVCStorageClassName: ibmc-vpc-block-10iops-tier
+    pvcStrategy: per-workspace
+    workspacePVCStorageClassName: ibmc-vpc-block-10iops-tier
