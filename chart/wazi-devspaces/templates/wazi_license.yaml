@@ -1,0 +1,9 @@
+apiVersion: org.eclipse.che/v1
+kind: WaziLicense
+metadata:
+  name: wazi-devspaces-{{ .Values.namespace }}  
+  namespace: {{ .Values.namespace }}  
+spec:
+  license:
+    accept: {{ .Values.wazi_license_accept }}  
+    use: {{ .Values.wazi_license_use }}  

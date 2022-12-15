@@ -1,4 +1,4 @@
-name: gitops-wazi-dev-spaces
+name: gitops-wazi-ds
 type: gitops
 description: >-
   Module to populate a gitops repo with the resources to provision wazi-dev-spaces
@@ -21,6 +21,10 @@ versions:
       - id: namespace
         refs:
           - source: github.com/cloud-native-toolkit/terraform-gitops-namespace.git
+            version: '>= 1.0.0'
+      - id: gitops-wazi-ds-op
+        refs:
+          - source: github.com/cloud-native-toolkit/terraform-gitops-wazi-ds-operator.git
             version: '>= 1.0.0'
     variables:
       - name: gitops_config
