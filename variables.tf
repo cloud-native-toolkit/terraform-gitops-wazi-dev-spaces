@@ -66,6 +66,7 @@ variable "git_credentials" {
 variable "namespace" {
   type        = string
   description = "The namespace where the application should be deployed"
+  default = "wazi-devspaces"
 }
 
 variable "kubeseal_cert" {
@@ -78,4 +79,16 @@ variable "server_name" {
   type        = string
   description = "The name of the server"
   default     = "default"
+}
+
+variable "license_accept" {
+  type = bool
+  description = "License acceptance"
+  default = true
+}
+
+variable "license_type" {
+  type = string
+  description = "<idzee/wazi> Choose between idzee/wazi installations of devspaces on your project"
+  default = "wazi"
 }

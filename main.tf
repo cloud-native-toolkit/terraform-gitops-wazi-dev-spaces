@@ -1,8 +1,11 @@
 locals {
-  name          = "my-module"
+  name          = "wazi-devspaces"
   yaml_dir      = "${path.cwd}/.tmp/${local.name}/chart/${local.name}"
   service_url   = "http://${local.name}.${var.namespace}"
   values_content = {
+    namespace: var.namespace
+    wazi_license_accept: var.license_accept
+    wazi_license_use: var.license_type
   }
   layer = "services"
   type  = "base"
