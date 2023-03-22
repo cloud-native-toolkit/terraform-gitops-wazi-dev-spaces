@@ -4,3 +4,5 @@
 namespace: wazi-devspaces
 wazi_license_accept: true
 wazi_license_use: wazi
+workspacePVCStorageClassName: ""
+postgresPVCStorageClassName: ""

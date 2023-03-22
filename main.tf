@@ -6,6 +6,8 @@ locals {
     namespace: var.namespace
     wazi_license_accept: var.license_accept
     wazi_license_use: var.license_type
+    postgresPVCStorageClassName: var.postgresPVCStorageClassName
+    workspacePVCStorageClassName: var.workspacePVCStorageClassName
   }
   layer = "services"
   type  = "base"

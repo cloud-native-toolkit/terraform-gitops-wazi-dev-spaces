@@ -92,3 +92,15 @@ variable "license_type" {
   description = "<idzee/wazi> Choose between idzee/wazi installations of devspaces on your project"
   default = "wazi"
 }
+
+variable "postgresPVCStorageClassName" {
+  type = string
+  description = "Wazi dev spaces postGres storage class"
+  default = ""
+}
+
+variable "workspacePVCStorageClassName" {
+  type = string
+  description = "Wazi dev spaces workspace storage class"
+  default = ""
+}
